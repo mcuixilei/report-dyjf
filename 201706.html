@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大雁金服2017年6月份运营报告</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <script type="text/javascript">
+
+        function getBrowserInfo() {
+            var agent = navigator.userAgent.toLowerCase();
+
+            var regStr_ie = /msie [\d.]+;/gi;
+            var regStr_ff = /firefox\/[\d.]+/gi
+            var regStr_chrome = /chrome\/[\d.]+/gi;
+            var regStr_saf = /safari\/[\d.]+/gi;
+            //IE
+            if (agent.indexOf("msie") > 0) {
+                return agent.match(regStr_ie);
+            }
+            //firefox
+            if (agent.indexOf("firefox") > 0) {
+                return agent.match(regStr_ff);
+            }
+            //Chrome
+            if (agent.indexOf("chrome") > 0) {
+                return agent.match(regStr_chrome);
+            }
+            //Safari
+            if (agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0) {
+                return agent.match(regStr_saf);
+            }
+
+        }
+
+        var browser = getBrowserInfo();
+        var verinfo = (browser + "").replace(/[^0-9.]/ig, "");
+
+        if (navigator.userAgent.indexOf("MSIE") > 0 && verinfo < 7) {
+            document.write("<span id='tipBrowe'>您正在使用 Internet Explorer 版本过低，在本站页面的显示效果可能有差异。建议您升级到 <a href='http://www.microsoft.com/china/windows/internet-explorer/' target='_blank'>Internet Explorer 8</a>     <span style=\"position:absolute;right:0px;;margin-right:6px\"><a  href=\"javascript:void(0)\" onclick=\"removeSpan()\" >X</a> </span> </span>");
+        }
+
+        function removeSpan() {
+            $("#tipBrowe").remove();
+        }
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="resources/201704/css/common.css">
+    <link rel="stylesheet" type="text/css" href="resources/201704/css/about.css">
+    <script type="text/javascript" src="resources/201704/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="resources/201704/js/echarts.min.js"></script>
+    <script type="text/javascript" src="resources/201704/js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="resources/201704/js/base.min_1.js"></script>
+    <style >
+        body {
+            font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            background: #081532;
+            min-width: 1200px;
+        }
+
+        h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top {
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+
+            left: 0;
+            top: 0;
+            background: #475058;
+            color: #fff;
+            z-index: 9
+        }
+
+        .top .inner {
+            width: 980px;
+            height: inherit;
+            margin: 0 auto;
+        }
+
+        .top a:visited {
+            color: #fff;
+        }
+
+        .top a {
+            float: right;
+            margin-left: 15px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .top a.down {
+            background: #fc9b5e;
+            padding: 0 25px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: 3px;
+            margin-top: 6px;
+        }
+
+        .img {
+            margin: 0 auto 10px;
+            box-shadow: 0 0 5px #666;
+            -moz-box-shadow: 0 0 5px #666;
+            -webkit-box-shadow: 0 0 5px #666;
+            width: 100%;
+        }
+
+        .img img {
+
+            display: block;
+        }
+
+        /*.chinamapbox {*/
+        /*width: 700px;*/
+        /*height: 700px;*/
+        /*float: left;*/
+        /*opacity: 0*/
+        /*}*/
+
+        /*.rank-list {*/
+        /*float: right;*/
+        /*width: 340px;*/
+        /*margin: 140px 70px 0 0;*/
+        /*opacity: 0*/
+        /*}*/
+
+        .rank-list td {
+            border: 1px solid #81cef2;
+            font-size: 18px;
+            height: 38px;
+            vertical-align: middle;
+        }
+
+        .rank-list td img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .rank-list .sec {
+            color: #e4542e;
+        }
+
+        .rank-list .sec1 {
+            color: #eebc10;
+        }
+
+        .rank-list .sec2 {
+            color: #14dca1;
+        }
+
+        .floor_qudao_nm {
+            left: 140px;
+            padding-left: 8px;
+        }
+        .botton_text{
+            font-size: 51px;
+            position: relative;
+            top: 3px;
+
+        }
+        .botton_text1{
+            font-size: 76px;
+            position: relative;
+            top: -22px;
+
+        }
+        .botton_text2{
+            font-size: 28px;
+
+        }
+        .botton_text3{
+            font-size: 51px;
+            position: relative;
+            top: -17px;
+        }
+        .english{
+            font-size: 21px;
+            position: relative;
+            left: -235px;
+            top: -34px;
+        }
+        .silpe{
+            font-size: 103px;
+            margin: auto -36px;
+
+        }
+        #d-top {
+            position: fixed;
+            float: right;
+            z-index: 10;
+            right: 10px;
+            bottom: 40px;
+        }
+        #d-top img {
+            width: 42px;
+            opacity: 0.3;
+            border: medium none;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="top">
+    <div class="inner">
+        <a href="https://www.dayanjf.com/">返回首页</a>
+
+    </div>
+</div>
+<div class="remplatebox">
+    <div class="floor_1 cur">
+        <div class="topbg">
+            <div class="anitbox"></div>
+        </div>
+
+        <div class="scl">
+            <div class="sclitem rotateone"><img src="resources/201704/picture/q1.png"/></div>
+            <div class="sclitem rotateone1"><img src="resources/201704/picture/q5.png"/></div>
+            <div class="sclitem rotateone"><img src="resources/201704/picture/q2.png"/></div>
+            <div class="sclitem rotateone1"><img src="resources/201704/picture/q3.png"/></div>
+            <div class="sclitem sdong"><img src="resources/201704/picture/q4.png"/></div>
+            <div class="sclyearsa">
+                <div class="lightSpeedIn"><img src="resources/201704/picture/2017.png"/></div>
+                <div class="title flipInX">6月运营报告</div>
+            </div>
+            <div class="scl_fg">
+                <div class="scl_fg_left slideInLeft"></div>
+
+                <div class="scl_fg_right slideInRight"></div>
+                <div class="scl_fg_bgfg slideInshow"></div>
+            </div>
+        </div>
+        <div class="sliders_an sliderstext1  bounceInDown1 ">
+            <a href="#item2">
+                <span>本月撮合交易量</span>
+                <img src="resources/201704/picture/j1.png" class="sliders_an_pic"/>
+            </a>
+        </div>
+        <div class="sliders_an sliderstext2  bounceInDown2 ">
+            <a href="#item3">
+                <span>单月标的数据</span>
+                <img src="resources/201704/picture/j3.png" class="sliders_an_pic"/>
+            </a>
+        </div>
+        <div class="sliders_an sliderstext3  bounceInDown3 ">
+            <a href="#item4">
+                <span>投资人数</span>
+                <img src="resources/201704/picture/j2.png" class="sliders_an_pic"/>
+            </a>
+        </div>
+        <div class="sliders_an sliderstext4  bounceInDown4 ">
+            <a href="#item5">
+                <span>单月平台运营数据</span>
+                <img src="resources/201704/picture/j4.png" class="sliders_an_pic"/>
+            </a>
+        </div>
+        <div class="sliders_an sliderstext5  bounceInDown5 ">
+            <a href="#item6">
+                <span>用户数据</span>
+                <img src="resources/201704/picture/j6.png" class="sliders_an_pic"/>
+            </a>
+        </div>
+        <div class="sliders_an sliderstext6  bounceInDown6 ">
+            <a href="#item7">
+                <span>本月最豪投资人</span>
+                <img src="resources/201704/picture/j5.png" class="sliders_an_pic"/>
+            </a>
+        </div>
+
+    </div>
+    <div class="floorbox floor_2" id="item1">
+
+        <h3>成交额</h3>
+        <p class="subtitle">截止至2017年6月30日,平台总交易额55000000元，累计用户收益达到2012346.03元。</p>
+        <ul class="cjl row-fluid" id="cjbox">
+            <li class="f9b401 fadeInLeftBig">
+                <img src="resources/201704/picture/mb2.png">
+                <p class="cjl_name">累计成交金额</p>
+                <p><span id="counters_a">55000000</span>元</p>
+            </li>
+            <li class="fadeInRightBig">
+                <img src="resources/201704/picture/mb1.png">
+                <p class="cjl_name">用户收益</p>
+                <p><span id="counters_c">2012346.03</span>元</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="floorbox floor_2" id="item2">
+
+        <h3>本月撮合交易量</h3>
+        <div class="investdaytouzi_chartbox">
+            <div id="investdaytouzi-chart" style="width:1200px;height:400px;margin:40px auto"></div>
+        </div>
+
+    </div>
+
+    <div class="floorbox floor_2" id="item3">
+        <h3>单月借款标的数据</h3>
+        <p class="subtitle">2017年6月份平台借款标11笔。其中房产抵押6笔，质押贷款5笔。</p>
+
+        <div class="sy_p_chart_barbox">
+            <div id="sy_p_chart_bar" style="width:900px;height:550px;margin:40px auto"></div>
+        </div>
+        <h3>单月成交数据环比增长率</h3>
+        <p class="subtitle">截止至2017年6月30日，3月份平台成交数据1093万元，</p>
+        <p class="subtitle">4月份平台成交数据648万元，5月份平台成交数据465万元，6月份平台成交数据579万元。</p>
+        <div class="investdaytouzi_chartbox">
+            <div id="investdaytouzi-chart1" style="width:1200px;height:400px;margin:40px auto"></div>
+        </div>
+    </div>
+
+    <div class="floorbox floor_3" id="item4">
+
+        <h3>投资人数</h3>
+        <p class="subtitle">截止至2017年6月30日，大雁金服累计投资人数196人 。</p>
+        <p class="subtitle">6月新增投资人数为<span style="color:#eb4f4f">48人。</span></p>
+
+        <div class="dhbj_all">
+            <p>总投资人数</p>
+            <div class="dhbj_all_a row-fluid">
+                <span class="dhbj_all_ca"></span>
+                <span style="font-size:44px;color:#44c0ef;float:left;padding-left:10px;">196人</span>
+            </div>
+        </div>
+        <div class="dhbj_all">
+            <p>单月投资人数</p>
+            <div class="dhbj_all_a row-fluid">
+                <span class="dhbj_all_cb"></span>
+                <span style="font-size:44px;color:#f9b401;float:left;padding-left:10px;">48人</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="floorbox floor_4" id="item5">
+        <h3>单月平台运营数据</h3>
+        <ul class="cjl row-fluid" style="padding-top:0;">
+            <li>
+                <div id="sy_p_chart_bar_a" style="width:600px;height:400px;margin:40px auto"></div>
+                <div style="position:absolute;top:230px;left:255px;font-size:22px;">投资金额</div>
+            </li>
+            <li>
+                <div id="sy_p_chart_bar_b" style="width:600px;height:400px;margin:40px auto"></div>
+                <div style="position:absolute;top:230px;left:255px;font-size:22px;">投资期限</div>
+            </li>
+        </ul>
+        <ul class="cjl row-fluid" style="padding-top:0;">
+            <li>
+                <div id="sy_p_chart_bar_a1" style="width:600px;height:400px;margin:40px auto"></div>
+                <div style="position:absolute;top:230px;left:255px;font-size:22px;">借款金额</div>
+            </li>
+            <li>
+                <div id="sy_p_chart_bar_b1" style="width:600px;height:400px;margin:40px auto"></div>
+                <div style="position:absolute;top:230px;left:255px;font-size:22px;">借款期限</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="floorbox floor_yhsj" id="item6">
+        <h3>用户数据</h3>
+        <div class="subtitle">截止至2017年6月30日，注册人数为1271位。2017年6月份新增注册人数为2位。</div>
+        <div class="news_yhsj"><p style="padding-top:100px; font-weight:300;">新增注册</p>
+            <p style="color:#f9b401;font-size:64px;">2</p></div>
+        <div class="yhsj"><p style="font-weight:300;">总注册人数</p>
+            <p style="font-size:70px;">1271</p></div>
+    </div>
+
+    <div class="floorbox floor_3" id="item7">
+        <h3>本月最豪投资人</h3>
+        <ul class="floor_qudao row-fluid">
+            <li class="fadeInLeftBig">
+                <img class="xingbie" src="resources/201704/images/male.png">
+                <div class="floor_qudao_nm">刘先生</div>
+                <div class="floor_qudao_text">刘先生本月投资<span style="color:#007eff;">55万</span></div>
+            </li>
+            <li class="floor_qudao_b">
+                <img class="xingbie" src="resources/201704/images/male.png">
+                <div class="floor_qudao_nm" style="color:#e4542e;">  周先生</div>
+                <div class="floor_qudao_text">周先生本月投资<span style="color:#e4542e;">85万</span></div>
+            </li>
+            <li class="fadeInRightBig">
+                <img class="xingbie" src="resources/201704/images/male.png">
+                <div class="floor_qudao_nm" style="color:#f9b401;">  常先生</div>
+                <div class="floor_qudao_text">常先生本月投资<span style="color:#f9b401;">49万</span></div>
+            </li>
+            <li class="fadeInLeftBig" style="    margin-left: 200px;">
+                <img class="xingbie" src="resources/201704/images/female1.png">
+                <div class="floor_qudao_nm">  蔡女士</div>
+                <div class="floor_qudao_text">蔡女士本月投资<span style="color:#007eff;">36万</span></div>
+            </li>
+            <li class="fadeInRightBig">
+                <img class="xingbie" src="resources/201704/images/female1.png">
+                <div class="floor_qudao_nm" style="color:#f9b401;">  李女士</div>
+                <div class="floor_qudao_text">李女士本月投资<span style="color:#f9b401;">35万</span></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="floorbox floor_4" id="item8">
+
+        <h3>企业大事记</h3>
+
+        <ul class="cjl row-fluid">
+            <li style="width: 100%;">
+                <b style="    font-size: 25px;display: block;margin-top: -76px;text-shadow: 2px 3px 0px #679ac6;">大雁金服签署银行存管协议 树立业内合规新典范</b><br>
+                <a href="https://www.dayanjf.com/to/article-16-204-150.htm"><img style="width: 490px" src="resources/201704/images/hands.png"/></a>
+
+                <p style="text-indent:61px;    font-size: 20px;text-align: justify;    padding: 10px 92px;">
+                    今年2月23日，银监会联手十部委颁布《网络借贷资金存管业务指引》，指定商业银行作为唯一存管机构，倒逼网贷（P2P）行业加快资金存管进程。
+                    对于高门槛设置，大雁金服负责人高元彬持有积极乐观态度。他认为，由于银行对平台实力和风控要求较高，资金存管这一硬指标的门槛设置将在行业
+                    内完成一次筛选。实力雄厚、规模较大的平台才能通过银行审核、实现存管，并在行业合规的浪潮中存活下来，获得更公平的竞争和生存空间。<br>
+                <p style="text-indent:61px;    font-size: 20px;text-align: justify;    padding: 10px 92px;">
+                    大雁金服不断探索多方措施保障金融投资者的资金安全。不断完善风控体系，也不断的提供用户体验，为了给客户最好的用户体验和资金安全，
+                    大雁金服在选择银行存管的时间，对多家银行进行了筛选，也经过银行的多层审核，最终敲定了一家实力雄厚、用户体验极佳的银行进行资金存管。
+                    大雁金服银行存管即将上线，树立业内合规新典范，将是今年大雁金服实现合规体系升级的又一重大举措。</p>
+
+                </p>
+            </li>
+
+
+        </ul>
+    </div>
+    <div style="text-align: center;color: #fff;    margin-top: 100px;">
+        <p class="botton_text">
+            <span class="botton_text1">大雁金服</span>
+            <span class="silpe">丨</span>
+            <span class="botton_text3">让财富增值更简单</span>
+        </p>
+        <p class="english">Wild goose Financial services</p>
+        <p class="botton_text2">全国统一客服热线：400 6789 830 <span>网址：www.dayanjf.com</span></p>
+    </div>
+    <div class="floorbox floor_4" id="item9">
+
+
+
+        <ul class="cjl row-fluid" style="    background: url(resources/201704/images/line1.png) no-repeat center 250px;">
+            <li style="    margin-left:  191px;margin-right: -222px;">
+                <a href="#"><img style="width: 23%;" src="resources/201704/images/app.png"></a>
+
+                <div  class="newstextx">大雁金服ＡＰＰ</div>
+            </li>
+            <li style="width:280px;">
+                <a href="#"><img style="width: 50%;" src="resources/201704/images/gongzhonghao.jpg"></a>
+                <div class="newstextx">大雁金服公众号</div>
+            </li>
+        </ul>
+        <img src="resources/201704/images/bottom_circle.png" style="    position: relative;top: -101px;width: 1200px;height: 248px; left: -16px;">
+    </div>
+
+    <div style="text-align: center;margin-top:50px;    font-size: 12px; color: white;">
+        <p>注：因部分细节算法存在一定滞后性，数据存在小范围波动属正常现象。</p>
+    </div>
+    <div id="d-top" style="display:none;">
+        <a id="d-top-a" href="#" title="回到顶部">
+            <img src="resources/201704/images/returnTop.png"></a>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script>
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)) {
+        $("#menu").hide();
+        tele();
+        myinvestA();
+        myinvestA1();
+
+        myinvestB();
+
+        myinvestC();
+
+        myinvestD();
+
+        myinvestC1();
+        myinvestD1();
+
+        $("#cjbox li").css({opacity: "1"});
+        $(".news_yhsj").css({opacity: "1"});
+        $(".floor_qudao li").css({opacity: "1"});
+        $(".floor_xb li").css({opacity: "1"});
+        $(".chinamapbox").css({opacity: "1"});
+        $(".fxj_bg").css({opacity: "1"});
+        $(".fxj_main").css({opacity: "1"});
+        $(".fxj_main_f").css({opacity: "1"});
+        $(".fxj_main_f1").css({opacity: "1"});
+        $(".fxj_main_f2").css({opacity: "1"});
+        $(".rank-list").css({opacity: "1"});
+    } else {
+        pcLoad();
+    }
+    // 每月交易额
+    function myinvestA() {
+        var myinvestdaytouzi = echarts.init(document.getElementById('investdaytouzi-chart'));
+        option_touzi = {
+
+            tooltip: {
+                formatter: '{b}</br>{c}万元',
+
+            },
+
+            legend: {
+                data: ['交易额(万元)'],
+                textStyle: {
+                    color: "#fff"
+                },
+
+            },
+            xAxis: {
+                data: ["1-5日", "6-10日", "11-15日", "16-20日", "21-15日", "26-30日"],
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                splitLine: {show: false},
+            },
+            yAxis: {
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#fff',
+
+                    },
+                    formatter: '{value}万元'
+                },
+                splitLine: {show: false},
+
+            },
+            series: [{
+                name: '交易额(万元)',
+                type: 'bar',
+                data: [0, 185, 100, 133, 0, 161],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                barWidth: 45,
+                itemStyle: {
+                    normal: {
+                        color: '#03a4e7'
+                    }
+                }
+
+            }]
+        };
+        myinvestdaytouzi.setOption(option_touzi);
+    }
+    function myinvestA1() {
+        var myinvestdaytouzi = echarts.init(document.getElementById('investdaytouzi-chart1'));
+        option_touzi = {
+
+            tooltip: {
+                formatter: '{b}</br>{c}万元',
+
+            },
+
+            legend: {
+                data: ['交易额(万元)'],
+                textStyle: {
+                    color: "#fff"
+                },
+
+            },
+            xAxis: {
+                data: ["2月份", "3月份","4月份","5月份","6月份"],
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#fff'
+                    }
+                },
+                splitLine: {show: false},
+            },
+            yAxis: {
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#fff',
+
+                    },
+                    formatter: '{value}万元'
+                },
+                splitLine: {show: false},
+
+            },
+            series: [{
+                name: '交易额(万元)',
+                type: 'bar',
+                data: [137, 1093, 648,465,579],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                barWidth: 45,
+                itemStyle: {
+                    normal: {
+                        color: '#03a4e7'
+                    }
+                }
+
+            }]
+        };
+        myinvestdaytouzi.setOption(option_touzi);
+    }
+    //投资赚取收益数据
+    function myinvestB() {
+        var sy_pbar = echarts.init(document.getElementById('sy_p_chart_bar'));
+        optiona = {
+
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} {b}: {c}笔 ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                //x: 'right',
+                itemWidth: 16,
+                itemHeight: 12,
+                itemGap: 8,
+                bottom: "0",
+
+                data: ['房产抵押','质押贷款'],
+                textStyle: {
+                    color: "#fff",
+                }
+            },
+            color: [ '#f9b401','#00dda0', '#00a2e6',],
+
+            series: [
+                {
+                    name: '',
+                    type: 'pie',
+                    radius: ['100', '160'],
+                    center: ['52%', '40%'],
+                    avoidLabelOverlap: false,
+
+                    data: [
+                        {
+                            value: 6,
+                            name: '房产抵押'
+                        },
+                        {
+                            value: 5,
+                            name: '质押贷款'
+                        }
+
+
+                    ]
+                }
+            ]
+        };
+        sy_pbar.setOption(optiona);
+    }
+
+    function myinvestC() {
+        var sychart_bara = echarts.init(document.getElementById('sy_p_chart_bar_a'));
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} {b}: {c}笔 ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                bottom: "10px",
+
+                data: ['1-5万元', '6-10万元', '11-20万元', '21-50万元','51万元以上'],
+                textStyle: {
+                    color: "#fff"
+                }
+            },
+            color: ['#f9b401', '#00dda0', '#00a2e6', '#3AD101','#fff'],
+            series: [
+                {
+                    name: '',
+                    type: 'pie',
+                    radius: ['80', '120'],
+                    avoidLabelOverlap: true,
+
+                    data: [
+                        {
+                            value: 38,
+                            name: '1-5万元'
+                        },
+                        {
+                            value: 23,
+                            name: '6-10万元'
+                        },
+                        {
+                            value: 6,
+                            name: '11-20万元'
+                        },
+                        {
+                            value: 2,
+                            name: '21-50万元'
+                        },
+                        {
+                            value: 1,
+                            name: '51万元以上'
+                        }
+
+                    ]
+                }
+            ]
+        };
+        sychart_bara.setOption(option);
+    }
+    //期限
+    function myinvestD() {
+        var sychart_bar = echarts.init(document.getElementById('sy_p_chart_bar_b'));
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a}{b}: {c}笔 ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                bottom: "10px",
+                data: ['0-30天', '31-60天', '61-90天', '91-180天', '181-365天'],
+                textStyle: {
+                    color: "#fff"
+                }
+            },
+            color: ['#f9b401', '#00dda0', '#00a2e6', '#3AD101','#fff'],
+            series: [
+                {
+                    name: '',
+                    type: 'pie',
+                    radius: ['80', '120'],
+
+                    data: [
+                        {
+                            value: 4,
+                            name: '0-30天'
+                        },
+                        {
+                            value: 13,
+                            name: '31-60天'
+                        },
+                        {
+                            value: 23,
+                            name: '61-90天'
+                        },
+                        {
+                            value: 30,
+                            name: '91-180天'
+                        },
+                        {
+                            value: 0,
+                            name: '181-365天'
+                        }
+                    ]
+                }
+
+            ]
+        };
+        sychart_bar.setOption(option);
+    }
+
+    function myinvestC1() {
+        var sychart_bara = echarts.init(document.getElementById('sy_p_chart_bar_a1'));
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} {b}: {c}笔 ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                bottom: "10px",
+
+                data: [ '5-10万元','10-20万元', '21-50万元','51万元以上'],
+                textStyle: {
+                    color: "#fff"
+                }
+            },
+            color: ['#f9b401', '#00dda0', '#00a2e6','#3AD101'],
+            series: [
+                {
+                    name: '',
+                    type: 'pie',
+                    radius: ['80', '120'],
+                    avoidLabelOverlap: false,
+
+                    data: [
+
+                        {
+                            value: 2,
+                            name: '5-10万元'
+                        },
+                        {
+                            value: 2,
+                            name: '10-20万元'
+                        },
+                        {
+                            value: 2,
+                            name: '21-50万元'
+                        },
+                        {
+                            value: 5,
+                            name: '51万元以上'
+                        }
+
+                    ]
+                }
+            ]
+        };
+        sychart_bara.setOption(option);
+    }
+
+    function myinvestD1() {
+        var sychart_bar = echarts.init(document.getElementById('sy_p_chart_bar_b1'));
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} {b}: {c}笔 ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                bottom: "10px",
+                data: ['3个月以下', '6个月','9个月','12个月'],
+                textStyle: {
+                    color: "#fff"
+                }
+            },
+            color: ['#f9b401', '#00dda0', '#00a2e6', '#3AD101'],
+            series: [
+                {
+                    name: '',
+                    type: 'pie',
+                    radius: ['80', '120'],
+
+                    data: [
+                        {
+                            value: 7,
+                            name: '3个月以下'
+                        },
+                        {
+                            value: 4,
+                            name: '6个月'
+                        } ,
+                        {
+                            value: 0,
+                            name: '9个月'
+                        },
+                        {
+                            value: 0,
+                            name: '12个月'
+                        },
+
+                    ]
+                }
+
+            ]
+        };
+        sychart_bar.setOption(option);
+    }
+    function tele() {
+        var a=document.getElementsByClassName('sliderstext1')[0];
+        a.style.marginLeft='-592px';
+        var b=document.getElementsByClassName('sliderstext6')[0];
+        b.style.marginLeft='280px';
+    }
+
+    var isFirst = true;
+    var isFirst1 = true;
+    var isFirst2 = true;
+    var isFirst3 = true;
+    var isFirst4 = true;
+    var isFirst5 = true;
+    var isFirst6 = true;
+    var isFirst7 = true;
+    var isFirst8 = true;
+    var isFirst9 = true;
+    function pcLoad() {
+        $(window).scroll(function () {
+
+            var top = $(document).scrollTop();
+            var itemf = 300;
+            var item1 = $("#item1").offset().top + 300;
+            var item2 = $("#item2").offset().top + 200;
+            var item3 = $("#item3").offset().top + 200;
+            var item4 = $("#item4").offset().top + 200;
+            var item5 = $("#item5").offset().top + 200;
+            var item6 = $("#item6").offset().top + 400;
+            var item7 = $("#item7").offset().top + 300;
+            var item8 = $("#item8").offset().top + 300;
+            var item9 = $("#item9").offset().top + 500;
+            if (top > itemf && isFirst) {
+
+                $("#item1 p.subtitle").addClass("slideInshowM");
+                $("#cjbox").addClass("scrollshow");
+                isFirst = false;
+                var optionsa = {
+                    useEasing: true,
+                    useGrouping: true,
+                    separator: ',',
+                    decimal: '.',
+                    prefix: '',
+                    suffix: ''
+                };
+//                var demo = new CountUp("counters", 0, 76, 0, 3.5, optionsa);
+//                var demo1 = new CountUp("counters_a", 0, 8184, 0, 3, optionsa);
+//                var demo2 = new CountUp("counters_b", 0, 3, 0, 3.5, optionsa);
+//                var demo3 = new CountUp("counters_c", 0, 2599, 0, 3, optionsa);
+//                demo.start();
+//                demo1.start();
+//                demo2.start();
+//                demo3.start();
+            }
+            if (top > item1 && isFirst1) {
+                myinvestA();
+
+                isFirst1 = false;
+            }
+            if (top > item2 && isFirst2) {
+                $("#item3 .subtitle").addClass("slideInshowM");
+                myinvestB();
+
+                isFirst2 = false;
+            }
+            if (top > item3 && isFirst3) {
+                $("#item4 p.subtitle").addClass("slideInshowM");
+                $(".dhbj_all_ca").addClass("dhbjwidth");
+                $(".dhbj_all_cb").addClass("dhbjwidthA");
+                myinvestA1();
+                isFirst3 = false;
+            }
+            if (top > item4 && isFirst4) {
+                myinvestC();
+                myinvestD();
+                myinvestC1();
+                myinvestD1();
+                isFirst4 = false;
+            }
+            if (top > item5 && isFirst5) {
+                $(".news_yhsj").addClass("bounceIn");
+                $(".yhsj").addClass("fadeInUpBig");
+                isFirst5 = false;
+            }
+            if (top > item6 && isFirst6) {
+                $(".floor_qudao_b").addClass("bounceInDownxb");
+                $(".floor_qudao").addClass("scrollshow");
+
+                isFirst6 = false;
+            }
+            if (top > item7 && isFirst7) {
+                $(".floor_xb_b").addClass("flipInXA");
+                $(".floor_xb_a").addClass("bounceInA");
+                $(".floor_xb_c").addClass("bounceInA");
+                isFirst7 = false;
+            }
+            if (top > item8 && isFirst8) {
+                $("#item9").addClass("scrollshow");
+//                myinvestE();
+                isFirst8 = false;
+            }
+            if (top > item9 && isFirst9) {
+                $(".fxj_main").addClass("bounceIn");
+                $(".fxj_main_f").addClass("bounceIn1");
+                $(".fxj_main_f1").addClass("bounceIn2");
+                $(".fxj_main_f2").addClass("bounceIn3");
+                $(".fxj_bg").addClass("bounceIn4");
+                isFirst9 = false;
+            }
+
+
+            if (top > 600) {
+                $("#menu").show();
+            } else {
+                $("#menu").hide();
+            }         //定义变量，获取滚动条的高度
+            var menu = $("#menu");                      //定义变量，抓取#menu
+            var items = $(".remplatebox").find(".floorbox");    //定义变量，查找.item
+
+            var curId = "";                             //定义变量，当前所在的楼层item #id
+
+            items.each(function () {
+                var m = $(this);                        //定义变量，获取当前类
+                var itemsTop = m.offset().top;        //定义变量，获取当前类的top偏移量
+
+                if (top > itemsTop - 350) {
+                    curId = "#" + m.attr("id");
+                } else {
+                    return false;
+                }
+
+            });
+
+
+            //给相应的楼层设置cur,取消其他楼层的cur
+            var curLink = menu.find(".cur");
+            if (curId && curLink.attr("href") != curId) {
+                curLink.removeClass("cur");
+                menu.find("[href=" + curId + "]").addClass("cur");
+            }
+
+
+        });
+
+        $(function(){
+            var d_top=$('#d-top');
+            document.onscroll=function(){
+                var scrTop=(document.body.scrollTop||document.documentElement.scrollTop);
+                if(scrTop>500){
+                    if(scrTop>0){
+                        d_top.show();
+                    }else{
+                        d_top.hide();
+                    }
+                }
+
+                $("#d-top-a").click(function () {
+                    var speed = 200;//滑动的速度
+                    $('html,body').animate({ scrollTop: 0 }, speed);//去顶部
+                    $('html,body').animate({ scrollTop: $('#footer').offset().top }, speed);//去底部
+                });
+            }});
+
+
+    }
+
+
+</script>
